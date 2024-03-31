@@ -104,6 +104,10 @@ Public Class ConverterPage
         InputValue.Clear()
     End Sub
 
+    Private Sub BaseTo_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles BaseTo.SelectedIndexChanged
+        OutputValue.Clear()
+    End Sub
+
     Private Function ConvertBaseNToDecimal(inputString As String, baseN As BigInteger) As BigInteger
         If inputString Is Nothing Then
             Throw New ArgumentNullException("inputString")
